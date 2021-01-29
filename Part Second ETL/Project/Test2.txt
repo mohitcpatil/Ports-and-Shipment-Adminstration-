@@ -1,0 +1,16 @@
+Timezone_ID;Timezone;UTC offset (hours)
+1;America/Eastern;-5
+2;America/Central;-6
+3;America/Pacific;-8
+21;Europe/Lisbon;0
+22;America/Montreal;-5
+26;Asia/Tokyo;9
+30;Australia/Melbourne;8.8
+32;India/Calcutta;5.5
+25;Mexico/Pacific;-8
+23;Europe/London;1
+28;America/Tegucigalpa;-6
+24;Netherlands;1
+27;Honduras;-6
+29;Austria;1
+30;Australia/Melbourne;

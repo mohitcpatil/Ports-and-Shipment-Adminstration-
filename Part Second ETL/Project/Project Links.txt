@@ -1,0 +1,2 @@
+http://www.unece.org/cefact/locode/welcome.html
+https://datahub.io/core/country-list#data

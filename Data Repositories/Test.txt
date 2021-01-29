@@ -1,0 +1,2 @@
+Shipment_ID;Product_ID;Product_Name ;Product_Type;Product_subtype;Product_Quantity;Product_Description;Product_measure;Product_Container;Origin_Port_Code;Origin_Name ;Destination_Port_Code;Destination_Name;Date_Time_Departed;Date_Time_Arrived
+;;;;;;;;;     ;Miami;     ;;;

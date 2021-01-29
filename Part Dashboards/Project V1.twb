@@ -1,0 +1,1689 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20203.20.1018.2303                               -->
+<workbook original-version='18.1' source-build='2020.3.2 (20203.20.1018.2303)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelRelationshipPerfOptions.true...ObjectModelRelationshipPerfOptions />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='shipment_fact+ (port_dw)' inline='true' name='federated.19k8oda00o4hef19lm0ha089drrn' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='mysql.0k3jyww0u93dqy1bw61lo027n1ca'>
+            <connection class='mysql' dbname='port_dw' odbc-native-protocol='' one-time-sql='' port='3306' server='localhost' source-charset='' username='root' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='date_dimension1' table='[date_dimension]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='shipment_fact' table='[shipment_fact]' type='table' />
+          <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='date_dimension1' table='[date_dimension]' type='table' />
+          <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='date_dimension' table='[date_dimension]' type='table' />
+          <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='port_dimension' table='[port_dimension]' type='table' />
+          <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='port_dimension1' table='[port_dimension]' type='table' />
+          <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='product_dimension' table='[product_dimension]' type='table' />
+          <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='time_dimension' table='[time_dimension]' type='table' />
+          <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='time_dimension1' table='[time_dimension]' type='table' />
+          <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='timezone_dimension' table='[timezone_dimension]' type='table' />
+          <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='timezone_dimension1' table='[timezone_dimension]' type='table' />
+          <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='vendor_dimension' table='[vendor_dimension]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Bulk_OR_Container]' value='[product_dimension].[Bulk_OR_Container]' />
+          <map key='[Contact_Person]' value='[vendor_dimension].[Contact_Person]' />
+          <map key='[Country_Code (port_dimension1)]' value='[port_dimension1].[Country_Code]' />
+          <map key='[Country_Code (vendor_dimension)]' value='[vendor_dimension].[Country_Code]' />
+          <map key='[Country_Code]' value='[port_dimension].[Country_Code]' />
+          <map key='[Country_Name (port_dimension1)]' value='[port_dimension1].[Country_Name]' />
+          <map key='[Country_Name (vendor_dimension)]' value='[vendor_dimension].[Country_Name]' />
+          <map key='[Country_Name]' value='[port_dimension].[Country_Name]' />
+          <map key='[Date_Arrived]' value='[shipment_fact].[Date_Arrived]' />
+          <map key='[Date_Departed]' value='[shipment_fact].[Date_Departed]' />
+          <map key='[Date_Key (date_dimension1)]' value='[date_dimension1].[Date_Key]' />
+          <map key='[Date_Key]' value='[date_dimension].[Date_Key]' />
+          <map key='[Day (date_dimension1)]' value='[date_dimension1].[Day]' />
+          <map key='[Day]' value='[date_dimension].[Day]' />
+          <map key='[Destination]' value='[shipment_fact].[Destination]' />
+          <map key='[Email]' value='[vendor_dimension].[Email]' />
+          <map key='[Hour (time_dimension1)]' value='[time_dimension1].[Hour]' />
+          <map key='[Hour]' value='[time_dimension].[Hour]' />
+          <map key='[Latitude (port_dimension1)]' value='[port_dimension1].[Latitude]' />
+          <map key='[Latitude]' value='[port_dimension].[Latitude]' />
+          <map key='[Longitude (port_dimension1)]' value='[port_dimension1].[Longitude]' />
+          <map key='[Longitude]' value='[port_dimension].[Longitude]' />
+          <map key='[Minute (time_dimension1)]' value='[time_dimension1].[Minute]' />
+          <map key='[Minute]' value='[time_dimension].[Minute]' />
+          <map key='[Month (date_dimension1)]' value='[date_dimension1].[Month]' />
+          <map key='[Month]' value='[date_dimension].[Month]' />
+          <map key='[Origin]' value='[shipment_fact].[Origin]' />
+          <map key='[Phone]' value='[vendor_dimension].[Phone]' />
+          <map key='[Port_Code (port_dimension1)]' value='[port_dimension1].[Port_Code]' />
+          <map key='[Port_Code]' value='[port_dimension].[Port_Code]' />
+          <map key='[Port_Key (port_dimension1)]' value='[port_dimension1].[Port_Key]' />
+          <map key='[Port_Key]' value='[port_dimension].[Port_Key]' />
+          <map key='[Port_Name (port_dimension1)]' value='[port_dimension1].[Port_Name]' />
+          <map key='[Port_Name]' value='[port_dimension].[Port_Name]' />
+          <map key='[Product]' value='[shipment_fact].[Product]' />
+          <map key='[Product_ID]' value='[product_dimension].[Product_ID]' />
+          <map key='[Product_Key]' value='[product_dimension].[Product_Key]' />
+          <map key='[Product_Measure]' value='[product_dimension].[Product_Measure]' />
+          <map key='[Product_Name]' value='[product_dimension].[Product_Name]' />
+          <map key='[Product_Type]' value='[product_dimension].[Product_Type]' />
+          <map key='[Quantity]' value='[shipment_fact].[Quantity]' />
+          <map key='[Quarter (date_dimension1)]' value='[date_dimension1].[Quarter]' />
+          <map key='[Quarter]' value='[date_dimension].[Quarter]' />
+          <map key='[Shipment_Fact_Key]' value='[shipment_fact].[Shipment_Fact_Key]' />
+          <map key='[Shipment_ID]' value='[shipment_fact].[Shipment_ID]' />
+          <map key='[State_Code (port_dimension1)]' value='[port_dimension1].[State_Code]' />
+          <map key='[State_Code (vendor_dimension)]' value='[vendor_dimension].[State_Code]' />
+          <map key='[State_Code]' value='[port_dimension].[State_Code]' />
+          <map key='[State_Name (port_dimension1)]' value='[port_dimension1].[State_Name]' />
+          <map key='[State_Name (vendor_dimension)]' value='[vendor_dimension].[State_Name]' />
+          <map key='[State_Name]' value='[port_dimension].[State_Name]' />
+          <map key='[State_Type (port_dimension1)]' value='[port_dimension1].[State_Type]' />
+          <map key='[State_Type (vendor_dimension)]' value='[vendor_dimension].[State_Type]' />
+          <map key='[State_Type]' value='[port_dimension].[State_Type]' />
+          <map key='[Time_Arrived]' value='[shipment_fact].[Time_Arrived]' />
+          <map key='[Time_Departed]' value='[shipment_fact].[Time_Departed]' />
+          <map key='[Time_Key (time_dimension1)]' value='[time_dimension1].[Time_Key]' />
+          <map key='[Time_Key]' value='[time_dimension].[Time_Key]' />
+          <map key='[Timezone_Arrived]' value='[shipment_fact].[Timezone_Arrived]' />
+          <map key='[Timezone_Departed]' value='[shipment_fact].[Timezone_Departed]' />
+          <map key='[Timezone_Key (timezone_dimension1)]' value='[timezone_dimension1].[Timezone_Key]' />
+          <map key='[Timezone_Key]' value='[timezone_dimension].[Timezone_Key]' />
+          <map key='[Timezone_UTC_Offset (timezone_dimension1)]' value='[timezone_dimension1].[Timezone_UTC_Offset]' />
+          <map key='[Timezone_UTC_Offset]' value='[timezone_dimension].[Timezone_UTC_Offset]' />
+          <map key='[Vendor]' value='[shipment_fact].[Vendor]' />
+          <map key='[Vendor_ID]' value='[vendor_dimension].[Vendor_ID]' />
+          <map key='[Vendor_Key]' value='[vendor_dimension].[Vendor_Key]' />
+          <map key='[Vendor_Name]' value='[vendor_dimension].[Vendor_Name]' />
+          <map key='[Year (date_dimension1)]' value='[date_dimension1].[Year]' />
+          <map key='[Year]' value='[date_dimension].[Year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Shipment_Fact_Key</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Shipment_Fact_Key]</local-name>
+            <parent-name>[shipment_fact]</parent-name>
+            <remote-alias>Shipment_Fact_Key</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shipment_ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Shipment_ID]</local-name>
+            <parent-name>[shipment_fact]</parent-name>
+            <remote-alias>Shipment_ID</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Quantity]</local-name>
+            <parent-name>[shipment_fact]</parent-name>
+            <remote-alias>Quantity</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Product]</local-name>
+            <parent-name>[shipment_fact]</parent-name>
+            <remote-alias>Product</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Origin</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Origin]</local-name>
+            <parent-name>[shipment_fact]</parent-name>
+            <remote-alias>Origin</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Destination</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Destination]</local-name>
+            <parent-name>[shipment_fact]</parent-name>
+            <remote-alias>Destination</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Vendor</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Vendor]</local-name>
+            <parent-name>[shipment_fact]</parent-name>
+            <remote-alias>Vendor</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date_Departed</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Date_Departed]</local-name>
+            <parent-name>[shipment_fact]</parent-name>
+            <remote-alias>Date_Departed</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Time_Departed</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Time_Departed]</local-name>
+            <parent-name>[shipment_fact]</parent-name>
+            <remote-alias>Time_Departed</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Timezone_Departed</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Timezone_Departed]</local-name>
+            <parent-name>[shipment_fact]</parent-name>
+            <remote-alias>Timezone_Departed</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date_Arrived</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Date_Arrived]</local-name>
+            <parent-name>[shipment_fact]</parent-name>
+            <remote-alias>Date_Arrived</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Time_Arrived</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Time_Arrived]</local-name>
+            <parent-name>[shipment_fact]</parent-name>
+            <remote-alias>Time_Arrived</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Timezone_Arrived</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Timezone_Arrived]</local-name>
+            <parent-name>[shipment_fact]</parent-name>
+            <remote-alias>Timezone_Arrived</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date_Key</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Date_Key (date_dimension1)]</local-name>
+            <parent-name>[date_dimension1]</parent-name>
+            <remote-alias>Date_Key</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[date_dimension_B88A2FA2BE69457BA202ECFC94310335]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Day</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Day (date_dimension1)]</local-name>
+            <parent-name>[date_dimension1]</parent-name>
+            <remote-alias>Day</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[date_dimension_B88A2FA2BE69457BA202ECFC94310335]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Month</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Month (date_dimension1)]</local-name>
+            <parent-name>[date_dimension1]</parent-name>
+            <remote-alias>Month</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[date_dimension_B88A2FA2BE69457BA202ECFC94310335]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Year (date_dimension1)]</local-name>
+            <parent-name>[date_dimension1]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[date_dimension_B88A2FA2BE69457BA202ECFC94310335]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quarter</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Quarter (date_dimension1)]</local-name>
+            <parent-name>[date_dimension1]</parent-name>
+            <remote-alias>Quarter</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[date_dimension_B88A2FA2BE69457BA202ECFC94310335]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date_Key</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Date_Key]</local-name>
+            <parent-name>[date_dimension]</parent-name>
+            <remote-alias>Date_Key</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[date_dimension_CB56CE51921A42C9ABA68CDF5B182417]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Day</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Day]</local-name>
+            <parent-name>[date_dimension]</parent-name>
+            <remote-alias>Day</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[date_dimension_CB56CE51921A42C9ABA68CDF5B182417]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Month</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Month]</local-name>
+            <parent-name>[date_dimension]</parent-name>
+            <remote-alias>Month</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[date_dimension_CB56CE51921A42C9ABA68CDF5B182417]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[date_dimension]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[date_dimension_CB56CE51921A42C9ABA68CDF5B182417]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quarter</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Quarter]</local-name>
+            <parent-name>[date_dimension]</parent-name>
+            <remote-alias>Quarter</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[date_dimension_CB56CE51921A42C9ABA68CDF5B182417]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Port_Key</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Port_Key]</local-name>
+            <parent-name>[port_dimension]</parent-name>
+            <remote-alias>Port_Key</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_329657AA29A843E28F0D469B8D3BE9C2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Port_Code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Port_Code]</local-name>
+            <parent-name>[port_dimension]</parent-name>
+            <remote-alias>Port_Code</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>5</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_329657AA29A843E28F0D469B8D3BE9C2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Port_Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Port_Name]</local-name>
+            <parent-name>[port_dimension]</parent-name>
+            <remote-alias>Port_Name</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>25</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_329657AA29A843E28F0D469B8D3BE9C2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[port_dimension]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_329657AA29A843E28F0D469B8D3BE9C2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[port_dimension]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_329657AA29A843E28F0D469B8D3BE9C2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country_Code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country_Code]</local-name>
+            <parent-name>[port_dimension]</parent-name>
+            <remote-alias>Country_Code</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_329657AA29A843E28F0D469B8D3BE9C2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country_Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country_Name]</local-name>
+            <parent-name>[port_dimension]</parent-name>
+            <remote-alias>Country_Name</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_329657AA29A843E28F0D469B8D3BE9C2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State_Code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State_Code]</local-name>
+            <parent-name>[port_dimension]</parent-name>
+            <remote-alias>State_Code</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>3</width>
+            <contains-null>true</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_329657AA29A843E28F0D469B8D3BE9C2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State_Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State_Name]</local-name>
+            <parent-name>[port_dimension]</parent-name>
+            <remote-alias>State_Name</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>80</width>
+            <contains-null>true</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_329657AA29A843E28F0D469B8D3BE9C2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State_Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State_Type]</local-name>
+            <parent-name>[port_dimension]</parent-name>
+            <remote-alias>State_Type</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>60</width>
+            <contains-null>true</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_329657AA29A843E28F0D469B8D3BE9C2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Port_Key</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Port_Key (port_dimension1)]</local-name>
+            <parent-name>[port_dimension1]</parent-name>
+            <remote-alias>Port_Key</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_F1EDEFEC550D45F38AD3E51F01C8ABC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Port_Code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Port_Code (port_dimension1)]</local-name>
+            <parent-name>[port_dimension1]</parent-name>
+            <remote-alias>Port_Code</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>5</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_F1EDEFEC550D45F38AD3E51F01C8ABC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Port_Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Port_Name (port_dimension1)]</local-name>
+            <parent-name>[port_dimension1]</parent-name>
+            <remote-alias>Port_Name</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>25</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_F1EDEFEC550D45F38AD3E51F01C8ABC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Latitude (port_dimension1)]</local-name>
+            <parent-name>[port_dimension1]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_F1EDEFEC550D45F38AD3E51F01C8ABC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Longitude (port_dimension1)]</local-name>
+            <parent-name>[port_dimension1]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_F1EDEFEC550D45F38AD3E51F01C8ABC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country_Code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country_Code (port_dimension1)]</local-name>
+            <parent-name>[port_dimension1]</parent-name>
+            <remote-alias>Country_Code</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_F1EDEFEC550D45F38AD3E51F01C8ABC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country_Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country_Name (port_dimension1)]</local-name>
+            <parent-name>[port_dimension1]</parent-name>
+            <remote-alias>Country_Name</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_F1EDEFEC550D45F38AD3E51F01C8ABC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State_Code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State_Code (port_dimension1)]</local-name>
+            <parent-name>[port_dimension1]</parent-name>
+            <remote-alias>State_Code</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>3</width>
+            <contains-null>true</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_F1EDEFEC550D45F38AD3E51F01C8ABC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State_Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State_Name (port_dimension1)]</local-name>
+            <parent-name>[port_dimension1]</parent-name>
+            <remote-alias>State_Name</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>80</width>
+            <contains-null>true</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_F1EDEFEC550D45F38AD3E51F01C8ABC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State_Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State_Type (port_dimension1)]</local-name>
+            <parent-name>[port_dimension1]</parent-name>
+            <remote-alias>State_Type</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>60</width>
+            <contains-null>true</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[port_dimension_F1EDEFEC550D45F38AD3E51F01C8ABC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product_Key</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Product_Key]</local-name>
+            <parent-name>[product_dimension]</parent-name>
+            <remote-alias>Product_Key</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[product_dimension_FC40EB05EF22466BA0D262719705B663]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product_ID</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Product_ID]</local-name>
+            <parent-name>[product_dimension]</parent-name>
+            <remote-alias>Product_ID</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[product_dimension_FC40EB05EF22466BA0D262719705B663]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product_Measure</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product_Measure]</local-name>
+            <parent-name>[product_dimension]</parent-name>
+            <remote-alias>Product_Measure</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>30</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[product_dimension_FC40EB05EF22466BA0D262719705B663]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bulk_OR_Container</remote-name>
+            <remote-type>16</remote-type>
+            <local-name>[Bulk_OR_Container]</local-name>
+            <parent-name>[product_dimension]</parent-name>
+            <remote-alias>Bulk_OR_Container</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>3</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TINYINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_STINYINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[product_dimension_FC40EB05EF22466BA0D262719705B663]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product_Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product_Name]</local-name>
+            <parent-name>[product_dimension]</parent-name>
+            <remote-alias>Product_Name</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>130</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[product_dimension_FC40EB05EF22466BA0D262719705B663]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product_Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product_Type]</local-name>
+            <parent-name>[product_dimension]</parent-name>
+            <remote-alias>Product_Type</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[product_dimension_FC40EB05EF22466BA0D262719705B663]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Time_Key</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Time_Key]</local-name>
+            <parent-name>[time_dimension]</parent-name>
+            <remote-alias>Time_Key</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dimension_781D2AAED6604BE29DBBA76B701A30EE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Minute</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Minute]</local-name>
+            <parent-name>[time_dimension]</parent-name>
+            <remote-alias>Minute</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dimension_781D2AAED6604BE29DBBA76B701A30EE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hour</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Hour]</local-name>
+            <parent-name>[time_dimension]</parent-name>
+            <remote-alias>Hour</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dimension_781D2AAED6604BE29DBBA76B701A30EE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Time_Key</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Time_Key (time_dimension1)]</local-name>
+            <parent-name>[time_dimension1]</parent-name>
+            <remote-alias>Time_Key</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dimension_A44CB53FEF1A47BABD8BDF26C22BBA59]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Minute</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Minute (time_dimension1)]</local-name>
+            <parent-name>[time_dimension1]</parent-name>
+            <remote-alias>Minute</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dimension_A44CB53FEF1A47BABD8BDF26C22BBA59]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hour</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Hour (time_dimension1)]</local-name>
+            <parent-name>[time_dimension1]</parent-name>
+            <remote-alias>Hour</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dimension_A44CB53FEF1A47BABD8BDF26C22BBA59]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Timezone_Key</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Timezone_Key]</local-name>
+            <parent-name>[timezone_dimension]</parent-name>
+            <remote-alias>Timezone_Key</remote-alias>
+            <ordinal>64</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[timezone_dimension_D5DCCEBFFC5343B89A1C586248FB01FD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Timezone_UTC_Offset</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Timezone_UTC_Offset]</local-name>
+            <parent-name>[timezone_dimension]</parent-name>
+            <remote-alias>Timezone_UTC_Offset</remote-alias>
+            <ordinal>65</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[timezone_dimension_D5DCCEBFFC5343B89A1C586248FB01FD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Timezone_Key</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Timezone_Key (timezone_dimension1)]</local-name>
+            <parent-name>[timezone_dimension1]</parent-name>
+            <remote-alias>Timezone_Key</remote-alias>
+            <ordinal>67</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[timezone_dimension_FF6B7A6BBCDF4A04AE228D0F9FCE2BE2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Timezone_UTC_Offset</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Timezone_UTC_Offset (timezone_dimension1)]</local-name>
+            <parent-name>[timezone_dimension1]</parent-name>
+            <remote-alias>Timezone_UTC_Offset</remote-alias>
+            <ordinal>68</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[timezone_dimension_FF6B7A6BBCDF4A04AE228D0F9FCE2BE2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Vendor_Key</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Vendor_Key]</local-name>
+            <parent-name>[vendor_dimension]</parent-name>
+            <remote-alias>Vendor_Key</remote-alias>
+            <ordinal>70</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vendor_dimension_5B88946B4825417C98B9FA2BCFBAF6D4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Vendor_ID</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Vendor_ID]</local-name>
+            <parent-name>[vendor_dimension]</parent-name>
+            <remote-alias>Vendor_ID</remote-alias>
+            <ordinal>71</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vendor_dimension_5B88946B4825417C98B9FA2BCFBAF6D4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Vendor_Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Vendor_Name]</local-name>
+            <parent-name>[vendor_dimension]</parent-name>
+            <remote-alias>Vendor_Name</remote-alias>
+            <ordinal>72</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>false</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vendor_dimension_5B88946B4825417C98B9FA2BCFBAF6D4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Contact_Person</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Contact_Person]</local-name>
+            <parent-name>[vendor_dimension]</parent-name>
+            <remote-alias>Contact_Person</remote-alias>
+            <ordinal>73</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>25</width>
+            <contains-null>true</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vendor_dimension_5B88946B4825417C98B9FA2BCFBAF6D4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Email</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Email]</local-name>
+            <parent-name>[vendor_dimension]</parent-name>
+            <remote-alias>Email</remote-alias>
+            <ordinal>74</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>35</width>
+            <contains-null>true</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vendor_dimension_5B88946B4825417C98B9FA2BCFBAF6D4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Phone</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Phone]</local-name>
+            <parent-name>[vendor_dimension]</parent-name>
+            <remote-alias>Phone</remote-alias>
+            <ordinal>75</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vendor_dimension_5B88946B4825417C98B9FA2BCFBAF6D4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country_Code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country_Code (vendor_dimension)]</local-name>
+            <parent-name>[vendor_dimension]</parent-name>
+            <remote-alias>Country_Code</remote-alias>
+            <ordinal>76</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2</width>
+            <contains-null>true</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vendor_dimension_5B88946B4825417C98B9FA2BCFBAF6D4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country_Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country_Name (vendor_dimension)]</local-name>
+            <parent-name>[vendor_dimension]</parent-name>
+            <remote-alias>Country_Name</remote-alias>
+            <ordinal>77</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>true</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vendor_dimension_5B88946B4825417C98B9FA2BCFBAF6D4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State_Code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State_Code (vendor_dimension)]</local-name>
+            <parent-name>[vendor_dimension]</parent-name>
+            <remote-alias>State_Code</remote-alias>
+            <ordinal>78</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>3</width>
+            <contains-null>true</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vendor_dimension_5B88946B4825417C98B9FA2BCFBAF6D4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State_Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State_Name (vendor_dimension)]</local-name>
+            <parent-name>[vendor_dimension]</parent-name>
+            <remote-alias>State_Name</remote-alias>
+            <ordinal>79</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>80</width>
+            <contains-null>true</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vendor_dimension_5B88946B4825417C98B9FA2BCFBAF6D4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State_Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State_Type (vendor_dimension)]</local-name>
+            <parent-name>[vendor_dimension]</parent-name>
+            <remote-alias>State_Type</remote-alias>
+            <ordinal>80</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>60</width>
+            <contains-null>true</contains-null>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vendor_dimension_5B88946B4825417C98B9FA2BCFBAF6D4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Bulk OR Container' datatype='integer' name='[Bulk_OR_Container]' role='measure' type='quantitative' />
+      <column caption='Contact Person' datatype='string' name='[Contact_Person]' role='dimension' type='nominal' />
+      <column caption='Country Code (port dimension1)' datatype='string' name='[Country_Code (port_dimension1)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country Code (vendor dimension)' datatype='string' name='[Country_Code (vendor_dimension)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country Code' datatype='string' name='[Country_Code]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country Name (port dimension1)' datatype='string' name='[Country_Name (port_dimension1)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country Name (vendor dimension)' datatype='string' name='[Country_Name (vendor_dimension)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country Name' datatype='string' name='[Country_Name]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column aggregation='Sum' caption='Date Arrived' datatype='integer' name='[Date_Arrived]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Date Departed' datatype='integer' name='[Date_Departed]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Date Key (date dimension1)' datatype='integer' name='[Date_Key (date_dimension1)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Date Key' datatype='integer' name='[Date_Key]' role='dimension' type='ordinal' />
+      <column caption='Day (date dimension1)' datatype='integer' name='[Day (date_dimension1)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Day]' role='dimension' type='quantitative' />
+      <column aggregation='Sum' datatype='integer' name='[Destination]' role='dimension' type='ordinal' />
+      <column caption='Hour (time dimension1)' datatype='integer' name='[Hour (time_dimension1)]' role='measure' type='quantitative' />
+      <column caption='Latitude (port dimension1)' datatype='string' name='[Latitude (port_dimension1)]' role='dimension' type='nominal' />
+      <column caption='Longitude (port dimension1)' datatype='string' name='[Longitude (port_dimension1)]' role='dimension' type='nominal' />
+      <column caption='Minute (time dimension1)' datatype='integer' name='[Minute (time_dimension1)]' role='measure' type='quantitative' />
+      <column caption='Month (date dimension1)' datatype='integer' name='[Month (date_dimension1)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+      <column aggregation='Sum' datatype='integer' name='[Origin]' role='dimension' type='ordinal' />
+      <column caption='Port Code (port dimension1)' datatype='string' name='[Port_Code (port_dimension1)]' role='dimension' type='nominal' />
+      <column caption='Port Code' datatype='string' name='[Port_Code]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Port Key (port dimension1)' datatype='integer' name='[Port_Key (port_dimension1)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Port Key' datatype='integer' name='[Port_Key]' role='dimension' type='ordinal' />
+      <column caption='Port Name (port dimension1)' datatype='string' name='[Port_Name (port_dimension1)]' role='dimension' type='nominal' />
+      <column caption='Port Name' datatype='string' name='[Port_Name]' role='dimension' type='nominal' />
+      <column aggregation='Sum' datatype='integer' name='[Product]' role='dimension' type='ordinal' />
+      <column caption='Product ID' datatype='integer' name='[Product_ID]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Product Key' datatype='integer' name='[Product_Key]' role='dimension' type='ordinal' />
+      <column caption='Product Measure' datatype='string' name='[Product_Measure]' role='dimension' type='nominal' />
+      <column caption='Product Name' datatype='string' name='[Product_Name]' role='dimension' type='nominal' />
+      <column caption='Product Type' datatype='string' name='[Product_Type]' role='dimension' type='nominal' />
+      <column caption='Quarter (date dimension1)' datatype='integer' name='[Quarter (date_dimension1)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Quarter]' role='dimension' type='quantitative' />
+      <column caption='Shipment Fact Key' datatype='integer' name='[Shipment_Fact_Key]' role='dimension' type='ordinal' />
+      <column caption='Shipment ID' datatype='string' name='[Shipment_ID]' role='dimension' type='nominal' />
+      <column caption='State Code (port dimension1)' datatype='string' name='[State_Code (port_dimension1)]' role='dimension' type='nominal' />
+      <column caption='State Code (vendor dimension)' datatype='string' name='[State_Code (vendor_dimension)]' role='dimension' type='nominal' />
+      <column caption='State Code' datatype='string' name='[State_Code]' role='dimension' type='nominal' />
+      <column caption='State Name (port dimension1)' datatype='string' name='[State_Name (port_dimension1)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='State Name (vendor dimension)' datatype='string' name='[State_Name (vendor_dimension)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='State Name' datatype='string' name='[State_Name]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='State Type (port dimension1)' datatype='string' name='[State_Type (port_dimension1)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='State Type (vendor dimension)' datatype='string' name='[State_Type (vendor_dimension)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='State Type' datatype='string' name='[State_Type]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column aggregation='Sum' caption='Time Arrived' datatype='integer' name='[Time_Arrived]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Time Departed' datatype='integer' name='[Time_Departed]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Time Key (time dimension1)' datatype='integer' name='[Time_Key (time_dimension1)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Time Key' datatype='integer' name='[Time_Key]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Timezone Arrived' datatype='integer' name='[Timezone_Arrived]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Timezone Departed' datatype='integer' name='[Timezone_Departed]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Timezone Key (timezone dimension1)' datatype='integer' name='[Timezone_Key (timezone_dimension1)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Timezone Key' datatype='integer' name='[Timezone_Key]' role='dimension' type='ordinal' />
+      <column caption='Timezone UTC Offset (timezone dimension1)' datatype='integer' name='[Timezone_UTC_Offset (timezone_dimension1)]' role='measure' type='quantitative' />
+      <column caption='Timezone UTC Offset' datatype='integer' name='[Timezone_UTC_Offset]' role='measure' type='quantitative' />
+      <column aggregation='Sum' datatype='integer' name='[Vendor]' role='dimension' type='ordinal' />
+      <column caption='Vendor ID' datatype='integer' name='[Vendor_ID]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Vendor Key' datatype='integer' name='[Vendor_Key]' role='dimension' type='ordinal' />
+      <column caption='Vendor Name' datatype='string' name='[Vendor_Name]' role='dimension' type='nominal' />
+      <column caption='Year (date dimension1)' datatype='integer' name='[Year (date_dimension1)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='date_dimension_departed' datatype='table' name='[__tableau_internal_object_id__].[date_dimension_B88A2FA2BE69457BA202ECFC94310335]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='date_dimension_arrived' datatype='table' name='[__tableau_internal_object_id__].[date_dimension_CB56CE51921A42C9ABA68CDF5B182417]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='port_dimension_destination' datatype='table' name='[__tableau_internal_object_id__].[port_dimension_329657AA29A843E28F0D469B8D3BE9C2]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='port_dimension_origin' datatype='table' name='[__tableau_internal_object_id__].[port_dimension_F1EDEFEC550D45F38AD3E51F01C8ABC5]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='product_dimension' datatype='table' name='[__tableau_internal_object_id__].[product_dimension_FC40EB05EF22466BA0D262719705B663]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='shipment_fact' datatype='table' name='[__tableau_internal_object_id__].[shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='time_dimension_arrived' datatype='table' name='[__tableau_internal_object_id__].[time_dimension_781D2AAED6604BE29DBBA76B701A30EE]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='time_dimension_departed' datatype='table' name='[__tableau_internal_object_id__].[time_dimension_A44CB53FEF1A47BABD8BDF26C22BBA59]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='timezone_dimension_arrived' datatype='table' name='[__tableau_internal_object_id__].[timezone_dimension_D5DCCEBFFC5343B89A1C586248FB01FD]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='timezone_dimension_departed' datatype='table' name='[__tableau_internal_object_id__].[timezone_dimension_FF6B7A6BBCDF4A04AE228D0F9FCE2BE2]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='vendor_dimension' datatype='table' name='[__tableau_internal_object_id__].[vendor_dimension_5B88946B4825417C98B9FA2BCFBAF6D4]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='date_dimension_departed' id='date_dimension_B88A2FA2BE69457BA202ECFC94310335'>
+            <properties context=''>
+              <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='date_dimension1' table='[date_dimension]' type='table' />
+            </properties>
+          </object>
+          <object caption='date_dimension_arrived' id='date_dimension_CB56CE51921A42C9ABA68CDF5B182417'>
+            <properties context=''>
+              <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='date_dimension' table='[date_dimension]' type='table' />
+            </properties>
+          </object>
+          <object caption='port_dimension_destination' id='port_dimension_329657AA29A843E28F0D469B8D3BE9C2'>
+            <properties context=''>
+              <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='port_dimension' table='[port_dimension]' type='table' />
+            </properties>
+          </object>
+          <object caption='port_dimension_origin' id='port_dimension_F1EDEFEC550D45F38AD3E51F01C8ABC5'>
+            <properties context=''>
+              <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='port_dimension1' table='[port_dimension]' type='table' />
+            </properties>
+          </object>
+          <object caption='product_dimension' id='product_dimension_FC40EB05EF22466BA0D262719705B663'>
+            <properties context=''>
+              <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='product_dimension' table='[product_dimension]' type='table' />
+            </properties>
+          </object>
+          <object caption='shipment_fact' id='shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3'>
+            <properties context=''>
+              <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='shipment_fact' table='[shipment_fact]' type='table' />
+            </properties>
+          </object>
+          <object caption='time_dimension_arrived' id='time_dimension_781D2AAED6604BE29DBBA76B701A30EE'>
+            <properties context=''>
+              <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='time_dimension' table='[time_dimension]' type='table' />
+            </properties>
+          </object>
+          <object caption='time_dimension_departed' id='time_dimension_A44CB53FEF1A47BABD8BDF26C22BBA59'>
+            <properties context=''>
+              <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='time_dimension1' table='[time_dimension]' type='table' />
+            </properties>
+          </object>
+          <object caption='timezone_dimension_arrived' id='timezone_dimension_D5DCCEBFFC5343B89A1C586248FB01FD'>
+            <properties context=''>
+              <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='timezone_dimension' table='[timezone_dimension]' type='table' />
+            </properties>
+          </object>
+          <object caption='timezone_dimension_departed' id='timezone_dimension_FF6B7A6BBCDF4A04AE228D0F9FCE2BE2'>
+            <properties context=''>
+              <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='timezone_dimension1' table='[timezone_dimension]' type='table' />
+            </properties>
+          </object>
+          <object caption='vendor_dimension' id='vendor_dimension_5B88946B4825417C98B9FA2BCFBAF6D4'>
+            <properties context=''>
+              <relation connection='mysql.0k3jyww0u93dqy1bw61lo027n1ca' name='vendor_dimension' table='[vendor_dimension]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Date_Departed]' />
+              <expression op='[Date_Key (date_dimension1)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='date_dimension_B88A2FA2BE69457BA202ECFC94310335' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Date_Arrived]' />
+              <expression op='[Date_Key]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='date_dimension_CB56CE51921A42C9ABA68CDF5B182417' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Destination]' />
+              <expression op='[Port_Key]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='port_dimension_329657AA29A843E28F0D469B8D3BE9C2' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Origin]' />
+              <expression op='[Port_Key (port_dimension1)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='port_dimension_F1EDEFEC550D45F38AD3E51F01C8ABC5' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Product]' />
+              <expression op='[Product_Key]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='product_dimension_FC40EB05EF22466BA0D262719705B663' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Time_Arrived]' />
+              <expression op='[Time_Key]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='time_dimension_781D2AAED6604BE29DBBA76B701A30EE' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Time_Departed]' />
+              <expression op='[Time_Key (time_dimension1)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='time_dimension_A44CB53FEF1A47BABD8BDF26C22BBA59' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Timezone_Arrived]' />
+              <expression op='[Timezone_Key]' />
+            </expression>
+            <first-end-point object-id='shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='timezone_dimension_D5DCCEBFFC5343B89A1C586248FB01FD' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Timezone_Departed]' />
+              <expression op='[Timezone_Key (timezone_dimension1)]' />
+            </expression>
+            <first-end-point object-id='shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='timezone_dimension_FF6B7A6BBCDF4A04AE228D0F9FCE2BE2' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Vendor]' />
+              <expression op='[Vendor_Key]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='shipment_fact_A0E669BBC96B4AF4A14A4CA5392A94B3' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='vendor_dimension_5B88946B4825417C98B9FA2BCFBAF6D4' unique-key='true' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{926772B0-E2DB-4840-8686-6C0992888E8E}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='0.833333' source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{87F04157-90EE-4B03-A368-C040295B52A0}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='576' name='Sheet 1' width='576'>
+      iVBORw0KGgoAAAANSUhEUgAAAkAAAAJACAYAAABlmtk2AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAJ9UlEQVR4nO3WMQEAIAzAMMC/5+ECjiYKenbPzCwAgJDzOwAA4DUDBADkGCAAIMcAAQA5
+      BggAyDFAAECOAQIAcgwQAJBjgACAHAMEAOQYIAAgxwABADkGCADIMUAAQI4BAgByDBAAkGOA
+      AIAcAwQA5BggACDHAAEAOQYIAMgxQABAjgECAHIMEACQY4AAgBwDBADkGCAAIMcAAQA5BggA
+      yDFAAECOAQIAcgwQAJBjgACAHAMEAOQYIAAgxwABADkGCADIMUAAQI4BAgByDBAAkGOAAIAc
+      AwQA5BggACDHAAEAOQYIAMgxQABAjgECAHIMEACQY4AAgBwDBADkGCAAIMcAAQA5BggAyDFA
+      AECOAQIAcgwQAJBjgACAHAMEAOQYIAAgxwABADkGCADIMUAAQI4BAgByDBAAkGOAAIAcAwQA
+      5BggACDHAAEAOQYIAMgxQABAjgECAHIMEACQY4AAgBwDBADkGCAAIMcAAQA5BggAyDFAAECO
+      AQIAcgwQAJBjgACAHAMEAOQYIAAgxwABADkGCADIMUAAQI4BAgByDBAAkGOAAIAcAwQA5Bgg
+      ACDHAAEAOQYIAMgxQABAjgECAHIMEACQY4AAgBwDBADkGCAAIMcAAQA5BggAyDFAAECOAQIA
+      cgwQAJBjgACAHAMEAOQYIAAgxwABADkGCADIMUAAQI4BAgByDBAAkGOAAIAcAwQA5BggACDH
+      AAEAOQYIAMgxQABAjgECAHIMEACQY4AAgBwDBADkGCAAIMcAAQA5BggAyDFAAECOAQIAcgwQ
+      AJBjgACAHAMEAOQYIAAgxwABADkGCADIMUAAQI4BAgByDBAAkGOAAIAcAwQA5BggACDHAAEA
+      OQYIAMgxQABAjgECAHIMEACQY4AAgBwDBADkGCAAIMcAAQA5BggAyDFAAECOAQIAcgwQAJBj
+      gACAHAMEAOQYIAAgxwABADkGCADIMUAAQI4BAgByDBAAkGOAAIAcAwQA5BggACDHAAEAOQYI
+      AMgxQABAjgECAHIMEACQY4AAgBwDBADkGCAAIMcAAQA5BggAyDFAAECOAQIAcgwQAJBjgACA
+      HAMEAOQYIAAgxwABADkGCADIMUAAQI4BAgByDBAAkGOAAIAcAwQA5BggACDHAAEAOQYIAMgx
+      QABAjgECAHIMEACQY4AAgBwDBADkGCAAIMcAAQA5BggAyDFAAECOAQIAcgwQAJBjgACAHAME
+      AOQYIAAgxwABADkGCADIMUAAQI4BAgByDBAAkGOAAIAcAwQA5BggACDHAAEAOQYIAMgxQABA
+      jgECAHIMEACQY4AAgBwDBADkGCAAIMcAAQA5BggAyDFAAECOAQIAcgwQAJBjgACAHAMEAOQY
+      IAAgxwABADkGCADIMUAAQI4BAgByDBAAkGOAAIAcAwQA5BggACDHAAEAOQYIAMgxQABAjgEC
+      AHIMEACQY4AAgBwDBADkGCAAIMcAAQA5BggAyDFAAECOAQIAcgwQAJBjgACAHAMEAOQYIAAg
+      xwABADkGCADIMUAAQI4BAgByDBAAkGOAAIAcAwQA5BggACDHAAEAOQYIAMgxQABAjgECAHIM
+      EACQY4AAgBwDBADkGCAAIMcAAQA5BggAyDFAAECOAQIAcgwQAJBjgACAHAMEAOQYIAAgxwAB
+      ADkGCADIMUAAQI4BAgByDBAAkGOAAIAcAwQA5BggACDHAAEAOQYIAMgxQABAjgECAHIMEACQ
+      Y4AAgBwDBADkGCAAIMcAAQA5BggAyDFAAECOAQIAcgwQAJBjgACAHAMEAOQYIAAgxwABADkG
+      CADIMUAAQI4BAgByDBAAkGOAAIAcAwQA5BggACDHAAEAOQYIAMgxQABAjgECAHIMEACQY4AA
+      gBwDBADkGCAAIMcAAQA5BggAyDFAAECOAQIAcgwQAJBjgACAHAMEAOQYIAAgxwABADkGCADI
+      MUAAQI4BAgByDBAAkGOAAIAcAwQA5BggACDHAAEAOQYIAMgxQABAjgECAHIMEACQY4AAgBwD
+      BADkGCAAIMcAAQA5BggAyDFAAECOAQIAcgwQAJBjgACAHAMEAOQYIAAgxwABADkGCADIMUAA
+      QI4BAgByDBAAkGOAAIAcAwQA5BggACDHAAEAOQYIAMgxQABAjgECAHIMEACQY4AAgBwDBADk
+      GCAAIMcAAQA5BggAyDFAAECOAQIAcgwQAJBjgACAHAMEAOQYIAAgxwABADkGCADIMUAAQI4B
+      AgByDBAAkGOAAIAcAwQA5BggACDHAAEAOQYIAMgxQABAjgECAHIMEACQY4AAgBwDBADkGCAA
+      IMcAAQA5BggAyDFAAECOAQIAcgwQAJBjgACAHAMEAOQYIAAgxwABADkGCADIMUAAQI4BAgBy
+      DBAAkGOAAIAcAwQA5BggACDHAAEAOQYIAMgxQABAjgECAHIMEACQY4AAgBwDBADkGCAAIMcA
+      AQA5BggAyDFAAECOAQIAcgwQAJBjgACAHAMEAOQYIAAgxwABADkGCADIMUAAQI4BAgByDBAA
+      kGOAAIAcAwQA5BggACDHAAEAOQYIAMgxQABAjgECAHIMEACQY4AAgBwDBADkGCAAIMcAAQA5
+      BggAyDFAAECOAQIAcgwQAJBjgACAHAMEAOQYIAAgxwABADkGCADIMUAAQI4BAgByDBAAkGOA
+      AIAcAwQA5BggACDHAAEAOQYIAMgxQABAjgECAHIMEACQY4AAgBwDBADkGCAAIMcAAQA5BggA
+      yDFAAECOAQIAcgwQAJBjgACAHAMEAOQYIAAgxwABADkGCADIMUAAQI4BAgByDBAAkGOAAIAc
+      AwQA5BggACDHAAEAOQYIAMgxQABAjgECAHIMEACQY4AAgBwDBADkGCAAIMcAAQA5BggAyDFA
+      AECOAQIAcgwQAJBjgACAHAMEAOQYIAAgxwABADkGCADIMUAAQI4BAgByDBAAkGOAAIAcAwQA
+      5BggACDHAAEAOQYIAMgxQABAjgECAHIMEACQY4AAgBwDBADkGCAAIMcAAQA5BggAyDFAAECO
+      AQIAcgwQAJBjgACAHAMEAOQYIAAgxwABADkGCADIMUAAQI4BAgByDBAAkGOAAIAcAwQA5Bgg
+      ACDHAAEAOQYIAMgxQABAjgECAHIMEACQY4AAgBwDBADkGCAAIMcAAQA5BggAyDFAAECOAQIA
+      cgwQAJBjgACAHAMEAOQYIAAgxwABADkGCADIMUAAQI4BAgByDBAAkGOAAIAcAwQA5BggACDH
+      AAEAOQYIAMgxQABAjgECAHIMEACQY4AAgBwDBADkGCAAIMcAAQA5BggAyDFAAECOAQIAcgwQ
+      AJBjgACAHAMEAOQYIAAgxwABADkGCADIMUAAQI4BAgByDBAAkGOAAIAcAwQA5BggACDHAAEA
+      OQYIAMgxQABAjgECAHIup2IIfPpxjZMAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
