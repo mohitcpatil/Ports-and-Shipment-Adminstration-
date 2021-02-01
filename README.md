@@ -65,23 +65,23 @@ Our proposed schema for our Data Warehouse is illustrated below through our desi
 
 ## Database Star Schema Design 
 
-- 	**Fact Table**
+■ 	**Fact Table**
 
-■	Shipment_Fact - This table contains the fact and measures in the form of quantity, date and time
+-	Shipment_Fact - This table contains the fact and measures in the form of quantity, date and time
 
-- 	**Dimension Tables**
+■ 	**Dimension Tables**
 
-■	Vendor_Dimension - This table contains all the details of the vendor which are associated with shipment fact 
+-	Vendor_Dimension - This table contains all the details of the vendor which are associated with shipment fact 
 
-■	Date_Dimension - This table contains a date measure which is an important dimension to know details about shipment.
+-	Date_Dimension - This table contains a date measure which is an important dimension to know details about shipment.
 
-■	Product_Dimension - This table contains the information about product shipping across the ports.
+-	Product_Dimension - This table contains the information about product shipping across the ports.
 
-■	Port_Dimension - This table contains port details with their latitude and longitude.
+-	Port_Dimension - This table contains port details with their latitude and longitude.
 
-■	Time_Dimension - Time dimension contains information about the time arrived and departed in the form of hour and minute.
+-	Time_Dimension - Time dimension contains information about the time arrived and departed in the form of hour and minute.
 
-■	Timezone_Dimension - Timezone dimension contains information about the UTC offset to identify the region.
+-	Timezone_Dimension - Timezone dimension contains information about the UTC offset to identify the region.
 
 
 
