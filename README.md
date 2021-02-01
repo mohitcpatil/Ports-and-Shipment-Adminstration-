@@ -96,18 +96,19 @@ Our proposed schema for our Data Warehouse is illustrated below through our desi
 <img src="https://github.com/mohitcpatil/Ports-and-Shipment-Adminstration-/blob/master/Data%20Model%20Design/Port%20DW%20Version%201.png">
 
 
-## ETL  Implementation:
 
+
+## ETL  Implementation:
 
 For the ETL of this project we used Pentaho. We had the source data for this project mocked up through different online tools and Excel beforehand, and then loaded into an ER model. The DW model loaded mostly from the ER model.
 
 ### The ER Model Load:
 
-<img src="">
+<img src="https://github.com/mohitcpatil/Ports-and-Shipment-Adminstration-/blob/master/Part%20Dashboards/ER%20Model%20load.png">
  
 ### The Data Warehouse Model Load:
 
-<img src="">
+<img src="https://github.com/mohitcpatil/Ports-and-Shipment-Adminstration-/blob/master/Part%20Dashboards/Data%20Warehouse%20load.png">
 
 
 ## Tableau Implementation:
@@ -118,25 +119,27 @@ After brainstorming and filtering which charts we would like to include, we deci
 
 This first dashboard was about shipping by geographic location. It was filterable by year and either state or country. There were no complaints on this dashboard in specific during the presentation nor any particular issue with it.
  
-<img src="">
+<img src="https://github.com/mohitcpatil/Ports-and-Shipment-Adminstration-/blob/master/Part%20Dashboards/Descriptive%20part%201.png">
 
 ### Descriptive Part 2
 
 This dashboard was about shipment volume (our fact) as related to dimensions other than purely their location, that included ports, product type, route length(in hours), vendors, shipment amount over time within a given month, and countries over years. For this one our main takeaway ended up being the fact we should have integrated more forecasts into this section. But due to the way we didn’t precalculate fields, Tableau couldn’t generate a forecast.
  
-<img src="">
+<img src="https://github.com/mohitcpatil/Ports-and-Shipment-Adminstration-/blob/master/Part%20Dashboards/desc%20part%202.png">
 
 ### Predictive Part 1
 
 This dashboard we made about a very relevant lag measure for shipment amounts: trade balance forecast. Assuming there should be a return to the mean in trade, this chart generated making use of Tableau’s trend function is useful to anticipate an upcoming bounceback in trade in 2021.
  
- <img src="">
+ <img src="https://github.com/mohitcpatil/Ports-and-Shipment-Adminstration-/blob/master/Part%20Dashboards/predictive%20part%201.png">
 
 ### Predictive Part 2
 
 This dashboard was made to explore an additional scenario with 2021, concerning what the market would look like with different degrees of consolidation. Considering WWIB and Maersk are almost half of our trade volume, it was interesting to see how their growth at the cost of smaller shippers might impact our trade to other ports. This dashboard also received no criticism nor warranted comments from our team.
  
+<img src="https://github.com/mohitcpatil/Ports-and-Shipment-Adminstration-/blob/master/Part%20Dashboards/predictive%20part%202.png">
 
+ 
 ## General Tableau Takeaways
 
 While creating graphs in Tableau three things that quickly became apparent were that: datetime fields would work much better than custom integer fields in time dimensions, patchy data makes generating forecasts much more difficult, and finally it was the point in the project that gave us the clearest vision of what data we would want most for our reports. It never occurred to us to have price data until we got to Tableau, but once we were putting together the dashboards it became painfully clear how helpful it would have been.
@@ -148,31 +151,9 @@ During the implementation of this ETL I encountered many issues regarding missin
 
 Another takeaway from this ETL implementation was how working with the highly normalized tables from the ER model for the DW model import resulted in multiple levels of lookup when it came to denormalizing it. To the point that in a larger model using SQL joins would have been much quicker to implement. Another feature that Pentaho lucky supports. 
 
+
 ## Feedback from Presentation:
 During the presentation one of the relevant things to ETL that was pointed out was that our system was not real time and wasn’t thought out to interact with data flows from Google Analytics or any other ERP system. That is something that we could implement, even in Pentaho still using triggered jobs, but also through other systems.
 
 Another point on ETL that was raised during the presentation was regarding whether it would be hard, or if it would even be possible, to connect new fact tables to the model and change the granularity of the data. While we currently think that wouldn’t be much of a challenge, it is not something we planned extensively for, and in the future we will aim to have our solutions be more modular and expandable in both schema design and Pentaho Job sequences.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
