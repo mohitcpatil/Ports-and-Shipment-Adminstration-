@@ -53,16 +53,24 @@ It won’t matter if you are an employee of the Port, a logistics company, or an
 The core goal of this digital transformation is to add components of Data Warehousing and visual analytics tools into our outdated system architecture. But make no mistake, once achieved, these initiatives will serve as the basis of a true Automation Transformation; one where robotics and IoT can utilize our newly improved data repositories to perform tasks with minimal oversight.
 
                                                                                 
-Better Analytics						         Saves Money
+Better Analytics
+<img src="https://github.com/mohitcpatil/Ports-and-Shipment-Adminstration-/blob/master/Report/Picture1.png">
 
-Data Modeling:
+Saves Money
+<img src="https://github.com/mohitcpatil/Ports-and-Shipment-Adminstration-/blob/master/Report/Picture2.png">
+
+
+### Data Modeling:
 Our proposed schema for our Data Warehouse is illustrated below through our design dictionary, as well as the diagrams for Data Warehouse and the classical ER model in the following pages:
 
-●	Database Star Schema Design 
-○	Fact Table
+## Database Star Schema Design 
+
+- 	**Fact Table**
+
 ■	Shipment_Fact - This table contains the fact and measures in the form of quantity, date and time
 
-○	Dimension Tables
+- 	**Dimension Tables**
+
 ■	Vendor_Dimension - This table contains all the details of the vendor which are associated with shipment fact 
 
 ■	Date_Dimension - This table contains a date measure which is an important dimension to know details about shipment.
