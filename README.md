@@ -1,14 +1,14 @@
-### Project Abstract - Ports-and-Shipment-Adminstration-
+## Project Abstract - Ports-and-Shipment-Adminstration-
 
 The Port of Baltimore, overseen by the Maryland Port Administration, is one of the biggest commercial shipping hubs in the United States. In 2019, they represented a total of $58 billion in total revenue from imports and exports. Last year, the Port of Baltimore recorded 8.2 billion tons in container cargo going through. This is a good port to study, because our main task involves optimizing the process of container shipping. 
 
 Our Goal: Bring the Port of Baltimore into the 21st century through a digital transformation. We aim for this task to serve as a stepping stone to get the entire United States’ shipping systems to utilize the most up-to-date practices. 
 
-### Project Overview
+## Project Overview
 
 In this project, you'll apply what you've learned on data modeling with Apache Cassandra and complete an ETL pipeline using Python. To complete the project, you will need to model your data by creating tables in Apache Cassandra to run queries. You are provided with part of the ETL pipeline that transfers data from a set of CSV files within a directory to create a streamlined CSV file to model and insert data into Apache Cassandra tables.
 
-### Datasets
+## Datasets
 
 For this project, you'll be working with below dataset:  
 - [Approved Ports](https://github.com/mohitcpatil/Ports-and-Shipment-Adminstration-/blob/master/Data%20Repositories/Approved_Ports.xlsx)
@@ -33,7 +33,7 @@ For this project, you'll be working with below dataset:
    
    This dataset contains the timezone of each of the countries/zones listed for ports and shipment. I.e. Timezone, UTC Offset. 
 
-### Business Goals:
+## Business Goals:
 1.	**Answering Pertinent Business Questions Quickly**
 In this project, we aim to create a technological architecture that will make it easier for us to know what’s what in our organization. We want to pose questions regarding our logistics, and receive answers that are reliably backed up in a single repository of information. We want a repository that is updated in real-time, and allows for queries at a moment’s notice. 
 
@@ -53,17 +53,18 @@ It won’t matter if you are an employee of the Port, a logistics company, or an
 The core goal of this digital transformation is to add components of Data Warehousing and visual analytics tools into our outdated system architecture. But make no mistake, once achieved, these initiatives will serve as the basis of a true Automation Transformation; one where robotics and IoT can utilize our newly improved data repositories to perform tasks with minimal oversight.
 
                                                                                 
-Better Analytics
+             Better Analytics
 <img src="https://github.com/mohitcpatil/Ports-and-Shipment-Adminstration-/blob/master/Report/Picture1.png">
 
-Saves Money
+
+               Saves Money
 <img src="https://github.com/mohitcpatil/Ports-and-Shipment-Adminstration-/blob/master/Report/Picture2.png">
 
 
-### Data Modeling:
+## Data Modeling:
 Our proposed schema for our Data Warehouse is illustrated below through our design dictionary, as well as the diagrams for Data Warehouse and the classical ER model in the following pages:
 
-## Database Star Schema Design 
+### Database Star Schema Design 
 
 ■ 	**Fact Table**
 
@@ -82,6 +83,10 @@ Our proposed schema for our Data Warehouse is illustrated below through our desi
 -	Time_Dimension - Time dimension contains information about the time arrived and departed in the form of hour and minute.
 
 -	Timezone_Dimension - Timezone dimension contains information about the UTC offset to identify the region.
+
+
+
+
 
 
 
