@@ -33,18 +33,23 @@ For this project, you'll be working with below dataset:
    
    This dataset contains the timezone of each of the countries/zones listed for ports and shipment. I.e. Timezone, UTC Offset. 
 
-Business Goals:
-1.	Answering Pertinent Business Questions Quickly
+### Business Goals:
+1.	**Answering Pertinent Business Questions Quickly**
 In this project, we aim to create a technological architecture that will make it easier for us to know what’s what in our organization. We want to pose questions regarding our logistics, and receive answers that are reliably backed up in a single repository of information. We want a repository that is updated in real-time, and allows for queries at a moment’s notice. 
-2.	Provide Value-Driven Analytics
+
+2.	**Provide Value-Driven Analytics**
 We want data visualization tools to be a core aspect of our system architecture. We want these tools to be able to provide easily digestible reporting in order to provide insights into the current state of our organization. Furthermore, we want to utilize our vast swaths of legacy data in order to craft forecasts that will allow us to easily discard outdated business practices while adopting new ones. 
-3.	Public-Private Partnerships
+
+3.	**Public-Private Partnerships**
 We strive to utilize the best practices that technology has to offer. We believe we can work directly alongside partners in the private sector to make this transformation possible. Experts in the private sector can bring innovative solutions for public use.
-4.	Bringing Legacy Systems to the 21st Century
+
+4.	**Bringing Legacy Systems to the 21st Century**
 We want a consolidation of our vast swaths of historical records. We aim to bring our legacy data into our new and improved architecture. This will serve as a vital part of our historical analysis.
-5.	Improving Things for ALL our Stakeholders
+
+5.	**Improving Things for ALL our Stakeholders**
 It won’t matter if you are an employee of the Port, a logistics company, or any of the parties involved. When the ‘who’, ‘what’, ‘where’, and ‘why’ are reliably outlined in a Data Warehouse, every party involved will benefit financially from an easily accessible repository of information.
-6.	Lay the Groundwork for Semi-Autonomous Operations
+
+6.	**Lay the Groundwork for Semi-Autonomous Operations**
 The core goal of this digital transformation is to add components of Data Warehousing and visual analytics tools into our outdated system architecture. But make no mistake, once achieved, these initiatives will serve as the basis of a true Automation Transformation; one where robotics and IoT can utilize our newly improved data repositories to perform tasks with minimal oversight.
 
                                                                                 
