@@ -87,50 +87,68 @@ Our proposed schema for our Data Warehouse is illustrated below through our desi
 
 
 
+## ER Schema
 
-
-
-
-
-
-
-
-
-
-
-
-
-ER Schema
+<img src="">
  
-DW Schema 
+## Data Warehouse Schema 
+
+<img src="">
 
 
+## ETL  Implementation:
 
 
-
-
-
-
-
-
-ETL  Implementation:
 For the ETL of this project we used Pentaho. We had the source data for this project mocked up through different online tools and Excel beforehand, and then loaded into an ER model. The DW model loaded mostly from the ER model.
 
-The ER Model Load:
+### The ER Model Load:
+
+<img src="">
  
-The Data Warehouse Model Load:
+### The Data Warehouse Model Load:
+
+<img src="">
+
+
+## Tableau Implementation:
+
+After brainstorming and filtering which charts we would like to include, we decided to split our dashboards into 4 parts. 2 filled with descriptive data, and two filled with prescriptive data, each with their own theme.
+
+### Descriptive Part 1
+
+This first dashboard was about shipping by geographic location. It was filterable by year and either state or country. There were no complaints on this dashboard in specific during the presentation nor any particular issue with it.
+ 
+<img src="">
+
+### Descriptive Part 2
+
+This dashboard was about shipment volume (our fact) as related to dimensions other than purely their location, that included ports, product type, route length(in hours), vendors, shipment amount over time within a given month, and countries over years. For this one our main takeaway ended up being the fact we should have integrated more forecasts into this section. But due to the way we didn’t precalculate fields, Tableau couldn’t generate a forecast.
+ 
+<img src="">
+
+### Predictive Part 1
+
+This dashboard we made about a very relevant lag measure for shipment amounts: trade balance forecast. Assuming there should be a return to the mean in trade, this chart generated making use of Tableau’s trend function is useful to anticipate an upcoming bounceback in trade in 2021.
+ 
+ <img src="">
+
+### Predictive Part 2
+
+This dashboard was made to explore an additional scenario with 2021, concerning what the market would look like with different degrees of consolidation. Considering WWIB and Maersk are almost half of our trade volume, it was interesting to see how their growth at the cost of smaller shippers might impact our trade to other ports. This dashboard also received no criticism nor warranted comments from our team.
  
 
+## General Tableau Takeaways
+
+While creating graphs in Tableau three things that quickly became apparent were that: datetime fields would work much better than custom integer fields in time dimensions, patchy data makes generating forecasts much more difficult, and finally it was the point in the project that gave us the clearest vision of what data we would want most for our reports. It never occurred to us to have price data until we got to Tableau, but once we were putting together the dashboards it became painfully clear how helpful it would have been.
 
 
+## Conclusion and takeaways from Implementation:
 
-
-Takeaways from Implementation:
 During the implementation of this ETL I encountered many issues regarding missing data. And it was only later in the project that I realized Pentaho allowed me to catch errors and divert them to another step, this made debugging the final stages of the transformation much easier.
 
 Another takeaway from this ETL implementation was how working with the highly normalized tables from the ER model for the DW model import resulted in multiple levels of lookup when it came to denormalizing it. To the point that in a larger model using SQL joins would have been much quicker to implement. Another feature that Pentaho lucky supports. 
 
-Feedback from Presentation:
+## Feedback from Presentation:
 During the presentation one of the relevant things to ETL that was pointed out was that our system was not real time and wasn’t thought out to interact with data flows from Google Analytics or any other ERP system. That is something that we could implement, even in Pentaho still using triggered jobs, but also through other systems.
 
 Another point on ETL that was raised during the presentation was regarding whether it would be hard, or if it would even be possible, to connect new fact tables to the model and change the granularity of the data. While we currently think that wouldn’t be much of a challenge, it is not something we planned extensively for, and in the future we will aim to have our solutions be more modular and expandable in both schema design and Pentaho Job sequences.
@@ -157,146 +175,4 @@ Another point on ETL that was raised during the presentation was regarding wheth
 
 
 
-Tableau Implementation:
 
-After brainstorming and filtering which charts we would like to include, we decided to split our dashboards into 4 parts. 2 filled with descriptive data, and two filled with prescriptive data, each with their own theme.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Descriptive Part 1
-This first dashboard was about shipping by geographic location. It was filterable by year and either state or country. There were no complaints on this dashboard in specific during the presentation nor any particular issue with it.
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Descriptive Part 2
-This dashboard was about shipment volume (our fact) as related to dimensions other than purely their location, that included ports, product type, route length(in hours), vendors, shipment amount over time within a given month, and countries over years. For this one our main takeaway ended up being the fact we should have integrated more forecasts into this section. But due to the way we didn’t precalculate fields, Tableau couldn’t generate a forecast.
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Predictive Part 1
-This dashboard we made about a very relevant lag measure for shipment amounts: trade balance forecast. Assuming there should be a return to the mean in trade, this chart generated making use of Tableau’s trend function is useful to anticipate an upcoming bounceback in trade in 2021.
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Predictive Part 2
-This dashboard was made to explore an additional scenario with 2021, concerning what the market would look like with different degrees of consolidation. Considering WWIB and Maersk are almost half of our trade volume, it was interesting to see how their growth at the cost of smaller shippers might impact our trade to other ports. This dashboard also received no criticism nor warranted comments from our team.
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-General Tableau Takeaways
-While creating graphs in Tableau three things that quickly became apparent were that: datetime fields would work much better than custom integer fields in time dimensions, patchy data makes generating forecasts much more difficult, and finally it was the point in the project that gave us the clearest vision of what data we would want most for our reports. It never occurred to us to have price data until we got to Tableau, but once we were putting together the dashboards it became painfully clear how helpful it would have been.
-
-# Project Steps
-
-## Below are steps you can follow to complete each component of this project.
-
-- Modeling your NoSQL database or Apache Cassandra database
-- Design tables to answer the queries outlined in the project template
-- Write Apache Cassandra CREATE KEYSPACE and SET KEYSPACE statements
-- Develop your CREATE statement for each of the tables to address each question
-- Load the data with INSERT statement for each of the tables
-- Include IF NOT EXISTS clauses in your CREATE statements to create tables only if the tables do not already exist. We recommend you also include DROP TABLE statement for each table, this way you can run drop and create tables whenever you want to reset your database and test your ETL pipeline
-- Test by running the proper select statements with the correct WHERE clause
-
-## Build ETL Pipeline
-
-- Implement the logic in section Part I of the notebook template to iterate through each event file in event_data to process and create a new CSV file in Python
-- Make necessary edits to Part II of the notebook template to include Apache Cassandra CREATE and INSERT statements to load processed records into relevant tables in your data model
-- Test by running SELECT statements after running the queries on your database
