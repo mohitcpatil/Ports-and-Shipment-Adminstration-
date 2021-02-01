@@ -89,11 +89,11 @@ Our proposed schema for our Data Warehouse is illustrated below through our desi
 
 ## ER Schema
 
-<img src="">
+<img src="https://github.com/mohitcpatil/Ports-and-Shipment-Adminstration-/blob/master/Data%20Model%20Design/Port%20ER%20Version%201.png">
  
 ## Data Warehouse Schema 
 
-<img src="">
+<img src="https://github.com/mohitcpatil/Ports-and-Shipment-Adminstration-/blob/master/Data%20Model%20Design/Port%20DW%20Version%201.png">
 
 
 ## ETL  Implementation:
