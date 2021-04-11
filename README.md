@@ -4,10 +4,6 @@ The Port of Baltimore, overseen by the Maryland Port Administration, is one of t
 
 Our Goal: Bring the Port of Baltimore into the 21st century through a digital transformation. We aim for this task to serve as a stepping stone to get the entire United States’ shipping systems to utilize the most up-to-date practices. 
 
-## Project Overview
-
-In this project, you'll apply what you've learned on data modeling with Apache Cassandra and complete an ETL pipeline using Python. To complete the project, you will need to model your data by creating tables in Apache Cassandra to run queries. You are provided with part of the ETL pipeline that transfers data from a set of CSV files within a directory to create a streamlined CSV file to model and insert data into Apache Cassandra tables.
-
 ## Datasets
 
 For this project, you'll be working with below dataset:  
