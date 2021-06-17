@@ -2,7 +2,7 @@
 
 The Port of Baltimore, overseen by the Maryland Port Administration, is one of the biggest commercial shipping hubs in the United States. In 2019, they represented a total of $58 billion in total revenue from imports and exports. Last year, the Port of Baltimore recorded 8.2 billion tons in container cargo going through. This is a good port to study, because our main task involves optimizing the process of container shipping. 
 
-Our Goal: Bring the Port of Baltimore into the 21st century through a digital transformation. We aim for this task to serve as a stepping stone to get the entire United States’ shipping systems to utilize the most up-to-date practices. 
+Our Goal: Bring the Port of Baltimore into the 21st century through a digital transformation. We aim for this task to serve as a stepping stone to get the entire United States’ shipping systems to utilize the most up-to-date practices
 
 ## Datasets
 
